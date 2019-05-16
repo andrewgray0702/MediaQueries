@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Media Query Practice</title>
+
+    <style>
+        .colors{
+            background-color: red;
+            color: white;
+        }
+        .divsA{
+            background-color: #25e8ea;
+            display: flex;
+            width: 80%;
+            float: left;
+            flex-flow: row wrap;
+        }
+        .divsB{
+            background-color: orange;
+            display: flex;
+            width: 20%;
+            float: right;
+            flex-flow: row wrap; 
+        }
+        .divA{
+            height: 150px;
+            text-align: center;
+            margin: 10px;
+            flex-basis: 23%;
+            box-sizing: border-box;
+        }
+        .divB {
+            height: 150px;
+            text-align: center;
+            margin: 10px;
+            width: 100%;
+        }
+        @media (max-width: 1200px){
+            .divsA, .divsB{
+                flex-basis: 100%;
+            }
+            .divsB{
+                flex-flow: row wrap;
+            }
+            .divA, .divB{
+                flex-basis: calc((100%/3)- 20px);
+            }
+        }
+        @media (max-width: 600px){
+            .divA{
+                flex-basis: calc(50% - 20px);
+            }
+        }
+        /*MEDIA QUERIES*/
+         /*Follow the guidelines on the pictures in this folder to restyle the page at the appropriate breakpoints do this without the use of flex*/
+
+    </style>
+</head>
+<body>
+<div class="divsA">
+    <div class="divA colors">A</div>
+    <div class="divA colors">A</div>
+    <div class="divA colors">A</div>
+    <div class="divA colors">A</div>
+    <div class="divA colors">A</div>
+    <div class="divA colors">A</div>
+    <div class="divA colors">A</div>
+    <div class="divA colors">A</div>
+    <div class="divA colors">A</div>
+</div>
+
+
+<div class="divsB">
+    <div class="divB colors">B</div>
+    <div class="divB colors">B</div>
+    <div class="divB colors">B</div>
+</div>
+
+</body>
+</html>
